@@ -4,14 +4,7 @@ pipeline {
     }
 
     stages {
-        stage('Download Dependencies') {
-            steps {
-                sh '''
-                go build
-                '''
-            }
-        }
-
+       
         stage('go get  Dependencies') {
             steps {
                 sh '''
