@@ -8,6 +8,13 @@ pipeline {
             steps {
                 sh '''
                 go build
+                '''
+            }
+        }
+
+    stage('Download Dependencies') {
+            steps {
+                sh '''
                 go get github.com/dgrijalva/jwt-go 
                 go get github.com/labstack/echo 
                 go get github.com/labstack/echo/middleware 
@@ -21,8 +28,6 @@ pipeline {
                 '''
             }
         }
-
-
 
         stage('preapare Artifact') {
             steps {
