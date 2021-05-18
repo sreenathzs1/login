@@ -8,6 +8,10 @@ pipeline {
             steps {
                 sh '''
                 go build
+                go get github.com/dgrijalva/jwt-go && go get github.com/labstack/echo && go get github.com/labstack/echo/middleware && go get github.com/labstack/gommon/log 
+                go get github.com/openzipkin/zipkin-go && go get github.com/openzipkin/zipkin-go/middleware/http && go get github.com/openzipkin/zipkin-go/reporter/http
+                go build main.go users.go tracing.go 
+                go build
                 '''
             }
         }
