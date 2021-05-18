@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Download Dependencies') {
+        stage('go get  Dependencies') {
             steps {
                 sh '''
                 go get github.com/dgrijalva/jwt-go 
