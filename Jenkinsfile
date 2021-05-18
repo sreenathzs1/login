@@ -15,6 +15,7 @@ pipeline {
         stage('go get  Dependencies') {
             steps {
                 sh '''
+                go build
                 go get github.com/dgrijalva/jwt-go 
                 go get github.com/labstack/echo 
                 go get github.com/labstack/echo/middleware 
