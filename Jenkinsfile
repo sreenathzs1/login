@@ -2,7 +2,6 @@ pipeline {
     agent {
         label 'JAVA' 
     }
-
     stages {
         stage('Go Get Git hubs files') {
             steps {
