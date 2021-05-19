@@ -3,7 +3,7 @@ pipeline {
         label 'JAVA' 
     }
     stages {
-        stage('Go Get Git hubs files') {
+        //stage('Go Get Git hubs files') {
             steps {
                 sh '''
                 go get "github.com/dgrijalva/jwt-go" 
@@ -15,7 +15,7 @@ pipeline {
                 go get "github.com/openzipkin/zipkin-go/reporter/http"
                 '''
             }
-        }
+        //}
         stage('Again build') {
             steps {
                 sh '''
