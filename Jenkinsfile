@@ -5,11 +5,16 @@ pipeline {
 
     stages {
        
-        stage('go get  Dependencies') {
+        stage('Build  Dependencies') {
             steps {
                 sh '''
                 go build
-
+                '''
+            }
+        }
+        stage('Go Get gihubs files') {
+            steps {
+                sh '''
                 go get github.com/dgrijalva/jwt-go 
                 go get github.com/labstack/echo 
                 go get github.com/labstack/echo/middleware 
@@ -17,13 +22,17 @@ pipeline {
                 go get github.com/openzipkin/zipkin-go 
                 go get github.com/openzipkin/zipkin-go/middleware/http
                 go get github.com/openzipkin/zipkin-go/reporter/http
-                
-                go build main.go user.go tracing.go 
-                go build
                 '''
             }
         }
-
+        stage('Again build') {
+            steps {
+                sh '''
+                 go build main.go user.go tracing.go 
+                 go build
+                 '''
+            }
+        }
         stage('preapare Artifact') {
             steps {
                 sh '''
