@@ -4,13 +4,6 @@ pipeline {
     }
 
     stages {
-        //stage('Build  Dependencies') {
-            //steps {
-                //sh '''
-               // go build
-               // '''
-           //}
-        //}
         stage('Go Get git hubs files') {
             steps {
                 sh '''
