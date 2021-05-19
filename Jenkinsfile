@@ -11,7 +11,7 @@ pipeline {
                // '''
            // }
         //}
-        stage('Go Get gihubs files') {
+        stage('Go Get git hubs files') {
             steps {
                 sh '''
                 go get "github.com/dgrijalva/jwt-go" 
