@@ -4,7 +4,7 @@ pipeline {
     }
 
     stages {
-       stage('Build  Dependencies') {
+        //stage('Build  Dependencies') {
             steps {
                 sh '''
                 go build
