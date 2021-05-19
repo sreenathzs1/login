@@ -5,12 +5,12 @@ pipeline {
 
     stages {
         //stage('Build  Dependencies') {
-            steps {
-                sh '''
-                go build
-                '''
-            }
-        }
+            //steps {
+                //sh '''
+               // go build
+               // '''
+           // }
+        //}
         stage('Go Get gihubs files') {
             steps {
                 sh '''
