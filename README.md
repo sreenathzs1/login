@@ -31,3 +31,5 @@ Start the services # vi /etc/systemd/system/login.service // configuration The s
 Or
 
     # ./login
+
+    //upload tags
