@@ -33,3 +33,4 @@ Or
     # ./login
 
     //upload tags7
+    // tags 8
