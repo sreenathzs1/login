@@ -32,4 +32,4 @@ Or
 
     # ./login
 
-    //upload tags
+    //upload tags7
