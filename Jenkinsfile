@@ -1,7 +1,7 @@
 @Library('todo') _
 
 todo(
-    COMPONENT           : 'frontend',
+    COMPONENT           : 'login',
     PROJECT_NAME        : "TODO",
     SLAVE_LABEL         : "NODEJS",
     SKIP_NEXUS_UPLOAD   : false,
