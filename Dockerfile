@@ -10,12 +10,18 @@
 # RUN mkdir -p ${GOPATH}/src ${GOPATH}/bin
 
 # # Install Glide
-# RUN go build main .
-# RUN go get -u github.com/Masterminds/glide/...
-
+# RUN         go build main .
+# RUN         go get github.com/dgrijalva/jwt-go
+# RUN         go get github.com/labstack/echo
+# RUN         go get github.com/labstack/echo/middleware
+# RUN         go get github.com/labstack/gommon/log
+# RUN         go get github.com/openzipkin/zipkin-go
+# RUN         go get github.com/openzipkin/zipkin-go/middleware/http
+# RUN         go get github.com/openzipkin/zipkin-go/reporter/http
+# RUN         go build
 # WORKDIR $GOPATH
 
-# CMD ["./main"]
+# CMD ["./login"]
 
 
 
@@ -35,3 +41,12 @@ RUN go build -o main .
 EXPOSE 8080
 
 CMD [ "./main" ]
+
+
+# FROM        golang
+# RUN         mkdir /login
+# COPY        . /login
+# WORKDIR     /login
+# 
+# CMD         [ "/login/login" ]
+# EXPOSE      8080
