@@ -44,9 +44,10 @@ CMD [ "./main" ]
 
 
 # FROM        golang
-# RUN         mkdir /login
-# COPY        . /login
-# WORKDIR     /login
-# 
-# CMD         [ "/login/login" ]
+# RUN         mkdir -p /go
+# WORKDIR     /go/login
+# COPY        / .
+# RUN        go mod init example.com/login
+# RUN        go get
+# RUN        go build
 # EXPOSE      8080
